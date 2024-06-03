@@ -1,0 +1,133 @@
+.section {
+  margin: 1.5rem;
+  height: fit-content;
+}
+
+.trending {
+  margin-top: 32px;
+}
+
+.sectionHeading {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHeading h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 20px;
+  line-height: 44px;
+}
+
+.sectionHeading h2 em {
+  font-style: normal;
+  color: #0071f8;
+}
+
+.mainButton a {
+  display: inline-block;
+  background-color: #ee626b;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 30px;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.mainButton a:hover {
+  background-color: #0071f8;
+  color: #fff;
+}
+
+.trendingItem {
+  width: 300px;
+  position: relative;
+  background-color: #eeeeee;
+  overflow: hidden;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+
+.thumb {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.thumb img {
+  height: 200px;
+}
+
+.price {
+  position: absolute;
+  text-align: right;
+  right: 20px;
+  top: 20px;
+  border-radius: 10px;
+  background-color: #008af8;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  padding: 8px 15px 6px 15px;
+}
+
+.price em {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: line-through;
+  display: block;
+}
+
+.downContent {
+  padding: 25px;
+}
+
+.category {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.category h4 {
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.category a {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: #ee626b;
+  color: #fff;
+  border-radius: 50%;
+  right: 25px;
+  bottom: 25px;
+  transition: all 0.3s;
+}
+
+.productsList {
+  padding: 1rem;
+  background-color: mintcream;
+}
+
+.productsList ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
