@@ -1,9 +1,11 @@
 import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import styles from "./ProductItem.module.css";
+import { Link } from "react-router-dom";
 
 function ProductItem({ game }) {
-  const { name, background_image, rating } = game;
+  const { id, name, background_image, rating } = game;
+
   return (
     <div className={styles.trendingItem}>
       <div className={styles.thumb}>
@@ -13,9 +15,9 @@ function ProductItem({ game }) {
       <div className={styles.downContent}>
         <span className={styles.category}>
           <h4>{name}</h4>
-          <a>
+          <Link to={`/products/${id}`}>
             <FaShoppingBag />
-          </a>
+          </Link>
         </span>
       </div>
     </div>

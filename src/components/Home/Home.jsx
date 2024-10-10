@@ -27,7 +27,7 @@ function Home() {
       <div className={styles.productsList}>
         <ul>
           {top3games.map((game) => (
-            <div className={styles.trendingItem}>
+            <div key={game.id} className={styles.trendingItem}>
               <div className={styles.thumb}>
                 <img alt="game-image" src={game.background_image} />
                 <span className={styles.price}>{game.rating}</span>
@@ -35,9 +35,9 @@ function Home() {
               <div className={styles.downContent}>
                 <span className={styles.category}>
                   <h4>{game.name}</h4>
-                  <a>
+                  <Link to={`/products/${game.id}`}>
                     <FaShoppingBag />
-                  </a>
+                  </Link>
                 </span>
               </div>
             </div>

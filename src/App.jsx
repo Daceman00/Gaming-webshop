@@ -24,7 +24,15 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index path="/" element={<HomePage />} />
             <Route path="/products" element={<ProductsPage />} />
-            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route
+              path="/products/:gameID"
+              element={
+                <ProductDetails>
+                  <ProductDetails.AllDetails />
+                  <ProductDetails.Buttons />
+                </ProductDetails>
+              }
+            />
           </Route>
         </Routes>
       </BrowserRouter>
