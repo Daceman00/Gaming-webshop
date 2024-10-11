@@ -83,7 +83,7 @@
   border-bottom: none;
 }
 
-.button2{
+.button2 {
   display: inline-block;
   position: relative;
   bottom: 1.5rem;
@@ -111,6 +111,10 @@
   color: #fff;
 }
 
+.activeButton {
+  background-color: #0071f8;
+  color: #fff;
+}
 
 .downContainer {
   padding: 1rem;
@@ -147,4 +151,48 @@
 .downContent li {
   padding: 1rem;
   display: block;
+}
+
+.reviews {
+  margin-top: 20px;
+}
+
+.reviewList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reviewItem {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.metascore {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.score {
+  color: #28a745; /* Green color for scores */
+}
+
+.reviewLink a {
+  color: #007bff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.reviewLink a:hover {
+  text-decoration: underline;
+}
+
+/* Icon spacing */
+.reviewLink a svg {
+  margin-right: 5px;
 }

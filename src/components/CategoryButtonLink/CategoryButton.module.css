@@ -1,0 +1,19 @@
+.mainButton a {
+  display: inline-block;
+  background-color: #ee626b;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 30px;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.mainButton a:hover {
+  background-color: #0071f8;
+  color: #fff;
+}

@@ -4,26 +4,28 @@ import { FaShoppingBag } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useGames } from "../Products/useGames";
 
+import CategoryButtonLink from "../CategoryButtonLink/CategoryButtonLink";
+import TrendingSection from "../TrendingSection/TrendingSection";
+import Heading from "../Heading/Heading";
+
 function Home() {
   const { games = [], isLoading, error } = useGames();
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   const sortedGames = [...games].sort((a, b) => b.rating - a.rating);
   const top3games = sortedGames.slice(0, 3);
 
   return (
     <div className={styles.section}>
-      <div className={styles.trending}>
-        <div className={styles.sectionHeading}>
-          <h2>
-            <em>Top Rated Games</em>
-          </h2>
-          <div className={styles.mainButton}>
-            <a>
-              <Link to="/products">View All</Link>
-            </a>
-          </div>
-        </div>
-      </div>
+      <TrendingSection>
+        <Heading>Top Rated Games</Heading>
+        <CategoryButtonLink>
+          <Link to="/products">View All Games</Link>
+        </CategoryButtonLink>
+      </TrendingSection>
+
       <div className={styles.productsList}>
         <ul>
           {top3games.map((game) => (

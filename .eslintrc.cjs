@@ -6,6 +6,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
+    "plugin:prettier/recommended"
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
@@ -17,5 +18,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "consistent-return": "error", // Ensure consistent return statements
+    "prettier/prettier": "error",  // Use Prettier as an ESLint rule
   },
 }

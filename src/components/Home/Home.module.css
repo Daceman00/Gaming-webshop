@@ -3,50 +3,6 @@
   height: fit-content;
 }
 
-.trending {
-  margin-top: 32px;
-}
-
-.sectionHeading {
-  margin-bottom: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sectionHeading h2 {
-  font-size: 36px;
-  font-weight: 700;
-  text-transform: capitalize;
-  margin-top: 20px;
-  line-height: 44px;
-}
-
-.sectionHeading h2 em {
-  font-style: normal;
-  color: #0071f8;
-}
-
-.mainButton a {
-  display: inline-block;
-  background-color: #ee626b;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  height: 50px;
-  line-height: 50px;
-  padding: 0px 30px;
-  border-radius: 25px;
-  transition: all 0.3s;
-}
-
-.mainButton a:hover {
-  background-color: #0071f8;
-  color: #fff;
-}
-
 .trendingItem {
   width: 300px;
   position: relative;

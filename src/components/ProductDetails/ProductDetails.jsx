@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import styles from "./ProductDetails.module.css";
 import { useGame } from "./useGame";
-import { FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaStar } from "react-icons/fa";
 
 const ProductsDetailsContext = createContext();
 
@@ -57,30 +57,59 @@ ProductDetails.AllDetails = function ProductDetailsAllDetails() {
 };
 
 ProductDetails.Buttons = function ProductDetailsButtons() {
-  const [toggle, setToggle] = useState("desc");
+  const [toggle, setToggle] = useState("description");
   const { game } = useDetailsContext();
   const { description_raw, metacritic_platforms } = game;
+
+  const sortedMetacriticScores = [...metacritic_platforms].sort(
+    (a, b) => b.metascore - a.metascore
+  );
+  console.log(sortedMetacriticScores);
 
   return (
     <>
       <div className={styles.downContent}>
-        <button className={styles.button1} onClick={() => setToggle("review")}>
+        <button
+          className={`${styles.button1} ${
+            toggle === "review" ? styles.activeButton : ""
+          }`}
+          onClick={() => setToggle("review")}
+        >
           Review
         </button>
-        <button className={styles.button2} onClick={() => setToggle("desc")}>
+        <button
+          className={`${styles.button2} ${
+            toggle === "description" ? styles.activeButton : ""
+          }`}
+          onClick={() => setToggle("description")}
+        >
           Description
         </button>
-        {toggle === "desc" ? (
+        {toggle === "description" ? (
           <p>{description_raw}</p>
         ) : (
-          <ul>
-            {metacritic_platforms.map((item) => (
-              <li key={item.id}>
-                <span>Metacritic score: {item.metascore}</span>
-                <a href={item.url}>{item.url}</a>
-              </li>
-            ))}
-          </ul>
+          <div className={styles.reviews}>
+            <h3>Reviews and Metacritic Scores</h3>
+            <ul className={styles.reviewList}>
+              {sortedMetacriticScores.map((item) => (
+                <li key={item.id} className={styles.reviewItem}>
+                  <div className={styles.metascore}>
+                    <span>Metacritic Score: </span>
+                    <span className={styles.score}>{item.metascore}</span>
+                  </div>
+                  <div className={styles.reviewLink}>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaExternalLinkAlt /> {item.url}
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
     </>

@@ -1,0 +1,12 @@
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 20px;
+  line-height: 44px;
+}
+
+.heading em {
+  font-style: normal;
+  color: #0071f8;
+}
