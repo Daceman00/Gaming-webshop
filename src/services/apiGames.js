@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const apiKey = "5174374ab9cd45b28fe281504edfe452"
+import { apiKey } from "../constants/constants";
 
 
 export async function getGames() {

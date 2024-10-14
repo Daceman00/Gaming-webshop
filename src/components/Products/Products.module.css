@@ -1,5 +1,6 @@
 .container {
   padding: 1rem;
+  background-color: mintcream;
 }
 
 .container h2 {
@@ -15,7 +16,6 @@
 .productsList {
   margin: 32px;
   padding: 1rem;
-  background-color: mintcream;
 }
 
 .productsList ul {
