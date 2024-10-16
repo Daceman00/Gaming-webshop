@@ -64,7 +64,6 @@ ProductDetails.Buttons = function ProductDetailsButtons() {
   const sortedMetacriticScores = [...metacritic_platforms].sort(
     (a, b) => b.metascore - a.metascore
   );
-  console.log(sortedMetacriticScores);
 
   return (
     <>

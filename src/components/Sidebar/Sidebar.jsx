@@ -19,7 +19,7 @@ function Sidebar() {
       <ul className={styles.genreList}>
         {sortedGenres.map((genre) => (
           <li key={genre.id} className={styles.genreItem}>
-            <Link to={``}>
+            <Link to={`/genres/${genre.slug}`}>
               <span>{genre.name}</span>
             </Link>
           </li>

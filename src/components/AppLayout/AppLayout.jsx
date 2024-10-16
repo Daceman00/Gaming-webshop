@@ -4,6 +4,7 @@ import Main from "../Main/Main";
 import { Outlet } from "react-router-dom";
 import ProductsPage from "../../pages/ProductsPage";
 import Footer from "../Footer/Footer";
+import GenrePage from "../../pages/GenrePage";
 
 function AppLayout() {
   return (
@@ -12,6 +13,7 @@ function AppLayout() {
         <Outlet>
           <HomePage />
           <ProductsPage />
+          <GenrePage />
         </Outlet>
         <Footer />
       </Main>

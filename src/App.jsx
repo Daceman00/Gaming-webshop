@@ -6,6 +6,7 @@ import AppLayout from "./components/AppLayout/AppLayout";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import GenrePage from "./pages/GenrePage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,6 +34,7 @@ function App() {
                 </ProductDetails>
               }
             />
+            <Route path="/genres/:genreName" element={<GenrePage />} />
           </Route>
         </Routes>
       </BrowserRouter>
