@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Products from "../components/Products/Products";
 import Navbar from "../components/Navbar/Navbar";
+import Search from "../components/Search/Search";
 
 function ProductsPage() {
+  const [searchQuery, setSearchQuery] = useState("");
   return (
     <>
       <Navbar />
-      <Products />
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Products searchQuery={searchQuery} />
     </>
   );
 }

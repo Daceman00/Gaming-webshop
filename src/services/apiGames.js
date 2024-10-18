@@ -20,6 +20,4 @@ export async function getGame(id) {
         console.error(err)
         throw new Error("Game can not be found")
     }
-
-
 }

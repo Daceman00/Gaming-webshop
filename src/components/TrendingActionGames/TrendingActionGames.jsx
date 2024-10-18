@@ -25,7 +25,6 @@ function TrendingActionGames() {
   );
 
   const top3ActionGames = sortedActionGames.slice(0, 3);
-  console.log(top3ActionGames);
 
   return (
     <div className={styles.section}>

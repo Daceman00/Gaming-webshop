@@ -9,11 +9,8 @@ function SingleGenre() {
   const { genre, isLoading, error } = useSingleGenre();
   const { games = [] } = useGames();
 
-  if (isLoading || !genre) return <div>Loading...</div>;
-
   if (error) return <div>{error.message}</div>;
-
-  console.log(genre.slug);
+  if (isLoading || !genre) return <div>Loading...</div>;
 
   const filteredGames = games.filter(
     (game) =>

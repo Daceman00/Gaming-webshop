@@ -89,25 +89,29 @@ ProductDetails.Buttons = function ProductDetailsButtons() {
         ) : (
           <div className={styles.reviews}>
             <h3>Reviews and Metacritic Scores</h3>
-            <ul className={styles.reviewList}>
-              {sortedMetacriticScores.map((item) => (
-                <li key={item.id} className={styles.reviewItem}>
-                  <div className={styles.metascore}>
-                    <span>Metacritic Score: </span>
-                    <span className={styles.score}>{item.metascore}</span>
-                  </div>
-                  <div className={styles.reviewLink}>
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaExternalLinkAlt /> {item.url}
-                    </a>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            {sortedMetacriticScores.length > 0 ? (
+              <ul className={styles.reviewList}>
+                {sortedMetacriticScores.map((item) => (
+                  <li key={item.id} className={styles.reviewItem}>
+                    <div className={styles.metascore}>
+                      <span>Metacritic Score: </span>
+                      <span className={styles.score}>{item.metascore}</span>
+                    </div>
+                    <div className={styles.reviewLink}>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt /> {item.url}
+                      </a>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No reviews or Metacritic scores available.</p>
+            )}
           </div>
         )}
       </div>
