@@ -5,38 +5,48 @@ import Search from "../Search/Search";
 
 function Navbar() {
   return (
-    <div className={styles.container}>
-      <a className={styles.logo}>
-        <img src="/src/assets/images/logo.png" alt="logo" />
-      </a>
-      <ul className={styles.nav}>
-        <li>
-          <a>
-            <Link to="/">Home</Link>
-          </a>
-        </li>
-        <li>
-          <a>
-            <Link>Our Shop</Link>
-          </a>
-        </li>
-        <li>
-          <a>
-            <Link to="/products">Products</Link>
-          </a>
-        </li>
-        <li>
-          <a>
-            <Link>Contact Us</Link>
-          </a>
-        </li>
-        <li>
-          <a>
-            <Link>Sign In</Link>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <nav className={styles.navbar}>
+      <div className={styles.container}>
+        <div className={styles.brand}>
+          <img
+            src="/src/assets/images/logo.png"
+            alt="logo"
+            className={styles.logo}
+          />
+        </div>
+
+        <ul className={styles.nav}>
+          <li className={styles.navItem}>
+            <Link to="/" className={styles.navLink}>
+              Home
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/shop" className={styles.navLink}>
+              Our Shop
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/products" className={styles.navLink}>
+              Products
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/contact" className={styles.navLink}>
+              Contact Us
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link
+              to="/signin"
+              className={`${styles.navLink} ${styles.ctaButton}`}
+            >
+              Sign In
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 
